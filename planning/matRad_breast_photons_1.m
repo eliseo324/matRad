@@ -208,6 +208,9 @@ end
 % allows subsequent inverse optimization.
 dij = matRad_calcPhotonDose(ct,stf,pln,cst,param);
 
+%% Export dij matrix
+matRad_exportDij('dij.bin',dij,stf);
+
 %% Inverse Optimization for IMRT
 % The goal of the fluence optimization is to find a set of beamlet/pencil 
 % beam weights which yield the best possible dose distribution according to
